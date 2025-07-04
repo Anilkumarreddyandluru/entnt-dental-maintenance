@@ -52,7 +52,7 @@ const Login = () => {
               />
             </div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-violet-900 to-purple-700 bg-clip-text text-transparent">
-              DentalCare
+             Entnt DentalCare
             </h1>
             <p className="text-gray-600 mt-2">Sign in to your account</p>
           </div>

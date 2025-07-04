@@ -49,7 +49,7 @@ const Layout = () => {
               </div>
               <div className="ml-3">
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-violet-900 to-purple-900 bg-clip-text text-transparent">
-                  DentalCare
+                  EntntDentalCare
                 </h1>
                 <p className="text-sm text-gray-600">Management Dashboard</p>
               </div>
