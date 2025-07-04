@@ -172,7 +172,7 @@ const AppointmentManagement = () => {
         </div>
         <button
           onClick={() => handleOpenModal()}
-          className="mt-4 md:mt-0 bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-violet-700 hover:to-purple-700 transition-all duration-200 flex items-center space-x-2 shadow-lg"
+          className="mt-4 md:mt-0 bg-gradient-to-r from-yellow-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-pink-900 hover:to-purple-700 transition-all duration-200 flex items-center space-x-2 shadow-lg"
         >
           <Plus className="h-5 w-5" />
           <span>Schedule Appointment</span>
