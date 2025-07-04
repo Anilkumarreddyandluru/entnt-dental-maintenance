@@ -103,3 +103,9 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .gradient-brand {
+    @apply bg-gradient-to-r from-brand-primary to-brand-secondary;
+  }
+}

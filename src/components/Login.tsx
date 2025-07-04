@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { Navigate } from 'react-router-dom';
-import { Activity, Mail, Lock, Eye, EyeOff } from 'lucide-react';
-
+import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
 const Login = () => {
   const { user, login } = useAuth();
   const [email, setEmail] = useState('');
@@ -33,9 +32,11 @@ const Login = () => {
 
   const demoCredentials = [
     { email: 'admin@entnt.in', password: 'admin123', role: 'Admin (Dentist)' },
-    { email: 'john@entnt.in', password: 'patient123', role: 'Patient' },
-    { email: 'jane@entnt.in', password: 'patient123', role: 'Patient' },
+    { email: 'anil@entnt.in', password: 'patient123', role: 'Patient' },
+    { email: 'reshu@entnt.in', password: 'patient123', role: 'Patient' },
   ];
+
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-100 via-purple-50 to-violet-200 flex items-center justify-center p-4">
@@ -43,11 +44,15 @@ const Login = () => {
         <div className="bg-white rounded-2xl shadow-2xl p-8 border border-violet-100">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="bg-gradient-to-r from-violet-600 to-purple-600 p-3 rounded-full w-16 h-16 mx-auto mb-4">
-              <Activity className="h-10 w-10 text-white" />
+            <div className="bg-gradient-to-r from-violet-900 to-purple-900 p-2 rounded-full w-14 h-14 mx-auto mb-4">
+              <img
+                src="/dental-icon.png"
+                alt="Dental Icon"
+                className="object-contain"
+              />
             </div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
-              DentalCare Pro
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-violet-900 to-purple-700 bg-clip-text text-transparent">
+              DentalCare
             </h1>
             <p className="text-gray-600 mt-2">Sign in to your account</p>
           </div>
@@ -76,7 +81,7 @@ const Login = () => {
                 Password
               </label>
               <div className="relative">
-                <Lock className="h-5 w-5 text-violet-500 absolute left-3 top-1/2 transform -translate-y-1/2" />
+                <Lock className="h-5 w-5 text-violet-800 absolute left-3 top-1/2 transform -translate-y-1/2" />
                 <input
                   type={showPassword ? 'text' : 'password'}
                   value={password}
@@ -104,7 +109,7 @@ const Login = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-violet-600 to-purple-600 text-white py-3 px-4 rounded-lg font-medium hover:from-violet-700 hover:to-purple-700 focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-gradient-to-r from-pink-800 to-purple-700 text-white py-3 px-4 rounded-lg font-medium hover:from-violet-900 hover:to-purple-700 focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? (
                 <div className="flex items-center justify-center">
@@ -119,11 +124,11 @@ const Login = () => {
 
           {/* Demo Credentials */}
           <div className="mt-8 p-4 bg-gradient-to-r from-violet-50 to-purple-50 rounded-lg border border-violet-100">
-            <h3 className="text-sm font-medium text-violet-800 mb-3">Demo Credentials:</h3>
+            <h3 className="text-sm font-medium text-blue-1000 mb-3">Demo Credentials:</h3>
             <div className="space-y-2 text-xs">
               {demoCredentials.map((cred, index) => (
                 <div key={index} className="flex justify-between items-center">
-                  <span className="text-violet-700 font-medium">{cred.role}:</span>
+                  <span className="text-purple-900 font-medium">{cred.role}:</span>
                   <button
                     onClick={() => {
                       setEmail(cred.email);
