@@ -70,8 +70,8 @@ The application comes with pre-configured demo users:
 | Role | Email | Password | Access Level |
 |------|-------|----------|--------------|
 | Admin (Dentist) | admin@entnt.in | admin123 | Full system access |
-| Patient | john@entnt.in | patient123 | Personal data only |
-| Patient | jane@entnt.in | patient123 | Personal data only |
+| Patient | anil@entnt.in | patient123 | Personal data only |
+| Patient | reshu@entnt.in | patient123 | Personal data only |
 
 ## 🏗️ Architecture
 
