@@ -3,6 +3,7 @@ import React from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useData } from '../contexts/DataContext';
 import { Calendar, Clock, DollarSign, FileText, User, Heart, Phone, Mail } from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
 
 const PatientDashboard = () => {
   const { user } = useAuth();
@@ -52,6 +53,38 @@ const PatientDashboard = () => {
       </div>
     );
   }
+
+  const handleScheduleAppointment = () => {
+    toast({
+      title: "Schedule Appointment",
+      description: "Please contact your dentist at (555) 123-4567 to schedule your next appointment.",
+    });
+  };
+
+  const handleViewHistory = () => {
+    toast({
+      title: "Treatment History",
+      description: `You have ${patientIncidents.length} total visits with ${completedTreatments.length} completed treatments.`,
+    });
+  };
+
+  const handleHealthRecords = () => {
+    toast({
+      title: "Health Records",
+      description: "Contact your dentist's office to update your health information and medical history.",
+    });
+  };
+
+  if (!currentPatient) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-xl text-gray-600">Patient profile not found</p>
+        </div>
+      </div>
+    );
+  }
+
 
   return (
     <div className="space-y-8">
@@ -246,24 +279,35 @@ const PatientDashboard = () => {
       </div>
 
       {/* Quick Actions */}
-      <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+    <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
         <h2 className="text-xl font-bold text-gray-800 mb-6">Quick Actions</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-gradient-to-r from-violet-100 to-purple-100 p-4 rounded-lg text-center">
+          <button
+            onClick={handleScheduleAppointment}
+            className="bg-gradient-to-r from-violet-100 to-purple-100 p-4 rounded-lg text-center hover:from-violet-200 hover:to-purple-200 transition-all duration-300 transform hover:scale-105 hover:shadow-md cursor-pointer"
+          >
             <Calendar className="h-8 w-8 text-violet-600 mx-auto mb-2" />
             <p className="font-medium text-violet-800">Schedule Appointment</p>
             <p className="text-xs text-violet-600 mt-1">Contact your dentist to book</p>
-          </div>
-          <div className="bg-gradient-to-r from-blue-100 to-cyan-100 p-4 rounded-lg text-center">
+          </button>
+          
+          <button
+            onClick={handleViewHistory}
+            className="bg-gradient-to-r from-blue-100 to-cyan-100 p-4 rounded-lg text-center hover:from-blue-200 hover:to-cyan-200 transition-all duration-300 transform hover:scale-105 hover:shadow-md cursor-pointer"
+          >
             <FileText className="h-8 w-8 text-blue-600 mx-auto mb-2" />
             <p className="font-medium text-blue-800">View History</p>
             <p className="text-xs text-blue-600 mt-1">See all appointments</p>
-          </div>
-          <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-4 rounded-lg text-center">
+          </button>
+          
+          <button
+            onClick={handleHealthRecords}
+            className="bg-gradient-to-r from-green-100 to-emerald-100 p-4 rounded-lg text-center hover:from-green-200 hover:to-emerald-200 transition-all duration-300 transform hover:scale-105 hover:shadow-md cursor-pointer"
+          >
             <Heart className="h-8 w-8 text-green-600 mx-auto mb-2" />
             <p className="font-medium text-green-800">Health Records</p>
             <p className="text-xs text-green-600 mt-1">Update health info</p>
-          </div>
+          </button>
         </div>
       </div>
     </div>
