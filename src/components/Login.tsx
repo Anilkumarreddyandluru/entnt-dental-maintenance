@@ -109,7 +109,7 @@ const Login = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-pink-800 to-purple-700 text-white py-3 px-4 rounded-lg font-medium hover:from-violet-900 hover:to-purple-700 focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-[linear-gradient(125deg,_hsl(311,100%,31%)_0%,_hsl(289,87%,37%)_100%)] text-white py-3 px-4 rounded-lg font-medium hover:from-violet-900 hover:to-purple-700 focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? (
                 <div className="flex items-center justify-center">
