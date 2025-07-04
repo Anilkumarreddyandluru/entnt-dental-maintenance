@@ -1,6 +1,14 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
+
+
+export interface FileAttachment {
+  name: string;
+  url: string;
+  type: string;
+}
+
 export interface Patient {
   id: string;
   name: string;
@@ -9,12 +17,6 @@ export interface Patient {
   email: string;
   healthInfo: string;
   address: string;
-}
-
-export interface FileAttachment {
-  name: string;
-  url: string;
-  type: string;
 }
 
 export interface Incident {
@@ -57,21 +59,21 @@ export const useData = () => {
 const mockPatients: Patient[] = [
   {
     id: "p1",
-    name: "John Doe",
-    dob: "1990-05-10",
-    contact: "1234567890",
-    email: "john@entnt.in",
+    name: "AnilReddy",
+    dob: "2001-05-10",
+    contact: "8767854321",
+    email: "anil@entnt.in",
     healthInfo: "No allergies",
-    address: "123 Main St, City"
+    address: "btm, bangalore"
   },
   {
     id: "p2",
-    name: "Jane Smith",
+    name: "reshu",
     dob: "1985-08-15",
-    contact: "0987654321",
-    email: "jane@entnt.in",
+    contact: "9877865091",
+    email: "reshu@entnt.in",
     healthInfo: "Allergic to penicillin",
-    address: "456 Oak Ave, Town"
+    address: "nagavara, bangalore"
   },
 ];
 

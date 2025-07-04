@@ -94,7 +94,7 @@ const PatientManagement = () => {
         </div>
         <button
           onClick={() => handleOpenModal()}
-          className="mt-4 md:mt-0 bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-violet-700 hover:to-purple-700 transition-all duration-200 flex items-center space-x-2 shadow-lg"
+          className="mt-4 md:mt-0 bg-gradient-to-r from-pink-700 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-violet-700 hover:to-purple-700 transition-all duration-200 flex items-center space-x-2 shadow-lg"
         >
           <Plus className="h-5 w-5" />
           <span>Add New Patient</span>
@@ -128,7 +128,7 @@ const PatientManagement = () => {
               key={patient.id}
               className="bg-white rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 overflow-hidden"
             >
-              <div className="bg-gradient-to-r from-violet-600 to-purple-600 p-4">
+              <div className="bg-gradient-to-r from-yellow-700 to-purple-700 p-4">
                 <div className="flex items-center justify-between">
                   <div className="bg-white/20 p-2 rounded-lg">
                     <User className="h-6 w-6 text-white" />
